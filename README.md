@@ -63,6 +63,6 @@ Estimate LD-based Ne: [ldNe.R](ldNe.R)
 
 Estimate population allele frequencies using EM: see [runEstP.pl](runEstP.pl) and [summarizeAlleleFreqs.R](summarizeAlleleFreqs.R)) for summaries
 
-Fit `EEMS` models of effective diversity and gene flow: see [formatData.R](formatData.R) for data formatting and [RunEems.sh](RunEems.sh) and [RunEemsFork.pl](RunEemsFork.pl) for running `EEMS`
+Fit `EEMS` models of effective diversity and gene flow: see [formatData.R](formatData.R) for data formatting and [RunEemsFork.pl](RunEemsFork.pl) for running `EEMS`
 
 Then see [SummarizeEEMS.R](SummarizeEEMS.R) for summarizing the results
