@@ -8,3 +8,9 @@ Actual GEAs and GOs: [https://github.com/Urodelan/LycaeidesGenomicOffset](https:
 Genome annotation: [https://github.com/chaturvedi-lab/Lmelissa_genome_annotation](https://github.com/chaturvedi-lab/Lmelissa_genome_annotation)
 
 DNA sequence alignment (which was done as part of a larger project, everything post-alignment was done specifically for the genomic offset project and is described below): [ https://github.com/chaturvedi-lab/Lycaeides_genomic_data_processing_2023]( https://github.com/chaturvedi-lab/Lycaeides_genomic_data_processing_2023)
+
+Files for all of my analyses are on the UofU CHPC: `/uufs/chpc.utah.edu/common/home/gompert-group4/projects/lyc_genomic_offset`.
+
+# Variant calling and filterning
+
+# Population genetic analyses
