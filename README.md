@@ -15,6 +15,8 @@ Files for all of my analyses are on the UofU CHPC: `/uufs/chpc.utah.edu/common/h
 
 Call varitns with `bcftools` (1.16): [BcfCall.sh](BcfCall.sh), the bam files are listed in [bams](bams)
 
+I also calcualted the total number of DNA sequences at this point: [CntReads.pl](CntReads.pl)
+
 Filter variants (multiple scripts, commands follow):
 
 ```bash
@@ -46,6 +48,8 @@ perl vcf2gl.pl morefilter_filtered2x_lyc_genom_offset.vcf
 ## split by population
 perl splitPops.pl lyc_goff.gl
 ```
+
+Some analyses used a set of 5000 common SNPs, this was accomplished with  [maf.R](maf.R) and [grabCommon.pl](grabCommon.pl )
 
 The rest is in the `PopGenom` subdirectory on the cluster.
 
