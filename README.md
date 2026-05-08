@@ -13,4 +13,6 @@ Files for all of my analyses are on the UofU CHPC: `/uufs/chpc.utah.edu/common/h
 
 # Variant calling and filterning
 
+Call varitns with `bcftools` (1.16): [BcfCall.sh](BcfCall.sh)
+
 # Population genetic analyses
