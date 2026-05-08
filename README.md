@@ -13,6 +13,40 @@ Files for all of my analyses are on the UofU CHPC: `/uufs/chpc.utah.edu/common/h
 
 # Variant calling and filterning
 
-Call varitns with `bcftools` (1.16): [BcfCall.sh](BcfCall.sh)
+Call varitns with `bcftools` (1.16): [BcfCall.sh](BcfCall.sh), the bam files are listed in [bams](bams)
+
+Filter variants (multiple scripts, commands follow):
+
+```bash
+#!/usr/bin/bash
+
+## filter initial set of 1,900,083 putative SNPs
+perl vcfFilter.pl lyc_genom_offset.vcf
+
+## filter based on excessive coverage and nearby SNPs
+#Finished filtering lyc_genom_offset.vcf
+#Retained 227692 variable loci
+
+## get depth information
+grep ^Sc filtered2x_lyc_genom_offset.vcf | perl -p -i -e 's/^S.+AD\s+//' | perl -p -i -e 's/[01]\/[01]:[0-9,]+:(\d+):[0-9,]+/\1/g' > depth_filter2x.txt
+sumDepth.R
+
+## filter depth and closeness
+perl filterSomeMore.pl filtered2x_lyc_genom_offset.vcf
+#Retained 142307 variable loci
+```
+
+Convert to gl format and split by population (multiple scripts, commands follow):
+
+```bash
+#!/usr/bin/bash
+## convert to gl
+perl vcf2gl.pl morefilter_filtered2x_lyc_genom_offset.vcf
+
+## split by population
+perl splitPops.pl lyc_goff.gl
+```
+
+The rest is in the `PopGenom` subdirectory on the cluster.
 
 # Population genetic analyses
