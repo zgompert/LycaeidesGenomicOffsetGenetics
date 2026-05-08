@@ -54,3 +54,15 @@ Some analyses used a set of 5000 common SNPs, this was accomplished with  [maf.R
 The rest is in the `PopGenom` subdirectory on the cluster.
 
 # Population genetic analyses
+
+Estimate genotypes and admixture proportions with `entropy`: see [forkEntropy.pl](forkEntropy.pl), [run_entropy.sh](run_entropy.sh), and [summarizeEntropy.sh](summarizeEntropy.sh), as well as [initq.R](initq.R) for initialization
+
+Also, see [plotAdmix.R](plotAdmix.R) and [summarizeGenoQ.R](summarizeGenoQ.R) for plotting and summaries
+
+Estimate LD-based Ne: [ldNe.R](ldNe.R)
+
+Estimate population allele frequencies using EM: see [runEstP.pl](runEstP.pl) and [summarizeAlleleFreqs.R](summarizeAlleleFreqs.R)) for summaries
+
+Fit EEMS models of effective diversity and gene flow: see [formatData.R](formatData.R) for data formatting and [RunEems.sh](RunEems.sh) and [RunEemsFork.pl](RunEemsFork.pl) for running EEMS
+
+Then see [SummarizeEEMS.R](SummarizeEEMS.R) for summarizing the results
